@@ -7,7 +7,6 @@ int main()
 
     arb_t x,err;
     arb_init(x); arb_init(err);
-
     if (arb_set_str(x,"0.25",prec))
     {
         printf("x:代入失敗\n");
