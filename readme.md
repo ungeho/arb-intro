@@ -13,6 +13,8 @@ arbライブラリの導入
 
     `sudo apt install build-essential`
 
+    `sudo apt install g++ m4 zlib1g-dev make p7zip`
+
     必要なライブラリのDLと解凍を行った後、gmp,mpfr,flint,arbの順に以下の手順を繰り返してインストール
 
     `./configure`
@@ -43,11 +45,17 @@ arbライブラリの導入
 
     再度コンパイル`gcc test.c -larb -lflint`と実行`./a.out`を行い無事出力されたら、以下を入力して環境変数の設定ファイルを開く。
 
-    `sudo nano /etc/enviroiment`
+    `sudo nano /etc/environment`
 
-    下記を追加して保存
+    下記を追加
 
     `LD_LIBRARY_PATH="/usr/local/lib"`
+
+    保存して終了
+
+    catで確認
+
+    `cat /etc/environment`
 
     再起動して再度確認
 
