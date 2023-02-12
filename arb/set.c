@@ -2,6 +2,7 @@
 #include <math.h>
 
 int main() {
+    // prec(精度)とdigit(10進数の出力桁数)
     slong prec,digit_floor,digit_ceil;
     //単精度(23+1) digit_floor=floor(23*log10(2.0)) digit_ceil=ceil((23+1)*log10(2.0)+1)
     //prec = 24; digit_floor=6; digit_ceil=9;
