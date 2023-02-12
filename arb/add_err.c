@@ -16,7 +16,6 @@ int main()
         printf("x:代入失敗\n");
     }
 
-
     // 2^-2 なので中点のみ
     arb_printn(x, digit_ceil, 0); flint_printf("\n");
 
