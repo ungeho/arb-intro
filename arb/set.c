@@ -16,7 +16,8 @@ int main() {
     arb_init(x);
     arb_init(y);
     // 成功時0を返す ,　失敗時は0以外を返す strからの代入 整数以外の値を代入する場合はこれを使う
-    if (arb_set_str(x,"0.625",prec)) {
+    if (arb_set_str(x,"0.625",prec))
+    {
         printf("x:代入失敗\n");
     }
     if (arb_set_str(y, "0.1", prec))
@@ -32,4 +33,6 @@ int main() {
     //変数をクリアし、割り当てられたメモリを開放する。 
     arb_clear(x);
     arb_clear(y);
+
+    return 0;
 }
