@@ -1,5 +1,4 @@
 #include "arb.h"
-#include <math.h>
 
 int main() {
     // prec(精度)とdigit(10進数の出力桁数)
@@ -16,7 +15,7 @@ int main() {
     arb_t x,y;
     arb_init(x);
     arb_init(y);
-    // success=0 , strからの代入
+    // 成功時0を返す ,　失敗時は0以外を返す strからの代入 整数以外の値を代入する場合はこれを使う
     if (arb_set_str(x,"0.625",prec)) {
         printf("x:代入失敗\n");
     }
