@@ -7,6 +7,7 @@ int main()
 
     arb_t x,err;
     arb_init(x); arb_init(err);
+    
     if (arb_set_str(x,"0.25",prec))
     {
         printf("x:代入失敗\n");
@@ -15,6 +16,7 @@ int main()
     {
         printf("x:代入失敗\n");
     }
+
     // 2^-2 なので中点のみ
     arb_printn(x, digit_ceil, 0); flint_printf("\n");
 
