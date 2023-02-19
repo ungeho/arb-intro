@@ -15,8 +15,13 @@ int main() {
     arb_t x,y;
     arb_init(x);
     arb_init(y);
+
+    char *re;
+
+    re = "0.625";
+
     // 成功時0を返す ,　失敗時は0以外を返す strからの代入 整数以外の値を代入する場合はこれを使う
-    if (arb_set_str(x,"0.625",prec))
+    if (arb_set_str(x,re,prec))
     {
         printf("x:代入失敗\n");
     }
@@ -30,7 +35,8 @@ int main() {
     // 0.1は2進の浮動小数点数で表すことが出来ない為、厳密な値を表現するためにradに値が入り区間として出力される。
     arb_printn(y, digit_ceil, 0); flint_printf("\n");
 
-    //変数をクリアし、割り当てられたメモリを開放する。 
+
+    //変数をクリアし、割り当てられたメモリを開放する。
     arb_clear(x);
     arb_clear(y);
 
